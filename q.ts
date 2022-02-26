@@ -121671,6 +121671,7 @@ class ServerContext {
         this.#dev = typeof Deno.env.get("DENO_DEPLOYMENT_ID") !== "string";
     }
     static async fromRoutes(routes2) {
+        console.log("here")
         const baseUrl = new URL("./", routes2.baseUrl).href;
         const pages = [];
         let renderer = DEFAULT_RENDERER;
@@ -122062,6 +122063,7 @@ function serializeCSPDirectives(csp) {
     }).join("; ");
 }
 async function start(routes4) {
+    console.log(routes4)
     const ctx = await ServerContext.fromRoutes(routes4);
     console.log("Server listening on http://localhost:8000");
     await listenAndServe(":8000", ctx.handler());

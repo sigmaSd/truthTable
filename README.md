@@ -1,5 +1,7 @@
 # fresh project
 
+https://truth-table.deno.dev/
+
 ### Usage
 
 Start the project:
